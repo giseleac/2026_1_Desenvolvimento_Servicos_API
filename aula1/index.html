@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="minhaDiv">
+        Oi
+    </div>
+
+    <script>
+        var minhaDiv = document.getElementById("minhaDiv");
+        minhaDiv.style.color = "pink";
+        //comentário
+        minhaDiv.width =  "50%";
+        minhaDiv.style.background = "grey";
+        minhaDiv.innerHTML += " <strong>galerinha</strong> "
+    </script>
+    <hr>
+    <input type="text" placeholder="Nome do produto: " id="txtNome" />
+    <button onclick="adicionar()"> Adicionar </button>
+    <h1>Lista de produtos</h1>
+    <div id="divProdutos"></div>
+
+    <script>
+        function adicionar(){
+            var divProdutos =document.getElementById("divProdutos");
+            var nome = document.getElementById("txtNome").value;
+            if( nome != ""){
+                divProdutos.innerHTML += nome + "<br>"
+            }
+        }
+    </script>
+
+
+
+ <!-- <script>
+        function adicionar(){
+            var nome = document.getElementById("txtNome").value;
+            if( nome != ""){
+                document.getElementById("divProdutos").innerHTML += nome + "<br>"
+            }
+        }
+    </script> Esse é para apagar o campo-->
+    <!-- ctrl + ; é um atalho para comentário -->
+
+
+</body>
+</html>
